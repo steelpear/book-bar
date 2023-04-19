@@ -7,6 +7,6 @@ import App from './App.vue'
 Vue.use(ElementUI, { locale })
 
 new Vue({
-  el: '#app',
+  el: '#book-bar',
   render: h => h(App)
 })
