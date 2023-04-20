@@ -5,13 +5,13 @@ import {
   Dropdown,
   DropdownMenu,
   DatePicker,
-  Icon,
   Row,
   Col,
   Divider
 } from 'element-ui'
 import lang from 'element-ui/lib/locale/lang/ru-RU'
 import locale from 'element-ui/lib/locale'
+import './main.scss'
 import App from './App.vue'
 
 locale.use(lang)
@@ -21,7 +21,6 @@ Vue.use(Select)
 Vue.use(Dropdown)
 Vue.use(DropdownMenu)
 Vue.use(DatePicker)
-Vue.use(Icon)
 Vue.use(Row)
 Vue.use(Col)
 Vue.use(Divider)

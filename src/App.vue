@@ -109,7 +109,9 @@
                     </div>
                   </div>
                   <el-divider v-if="childs.length < 1"></el-divider>
-                  <el-button type="text" class="text-btn" @click="submitForm">Посмотреть цены</el-button>
+                  <el-row align="middle" justify="center" type="flex">
+                    <el-button type="primary" size="small" class="text-btn" @click="submitForm">Посмотреть цены</el-button>
+                  </el-row>
                 </div>
               </el-dropdown-menu>
             </el-dropdown>
@@ -167,96 +169,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.cost-bar-wrap {
-  position: absolute;
-  bottom: 60px;
-  width: 900px;
-  box-shadow: 0 0 15px rgba(0,0,0,.15);
-  background: #fff;
-  color: rgba(0,0,0,.9);
-}
-.picker-title {
-  font-size:13px;
-  margin-left: 20px;
-}
-.__btn {
-  min-height: 84px;
-  border-radius: unset !important;
-  font-size: 20px !important;
-  width: 100% !important;
-  letter-spacing: .04em !important;
-  box-shadow: 0 -15px 15px -15px rgba(0,0,0,.15), 15px 0 15px -15px rgba(0,0,0,.15), 0 15px 15px -15px rgba(0,0,0,.15);
-}
-.el-divider--vertical {height: 2em !important;}
-svg {fill:rgba(0,0,0,.7);}
-.el-date-editor {
-  width: 300px !important;
-  border-color: rgba(0,0,0,.3) !important;
-  min-height: 45px !important;
-  cursor: pointer;
-}
-.el-date-editor .el-range-separator {line-height: 38px !important;}
-.el-range-editor .el-range-input {
-  font-size:16px !important;
-  color:rgba(0,0,0,.8) !important;
-  cursor: pointer;
-  }
-  .__label {font-size: 15px;}
-  .el-dropdown {
-    width:100% !important;
-    color: unset !important;
-    font-size: unset !important;
-  }
-  .el-dropdown-link {cursor: pointer;}
-  .drop-wrap {
-    width: 330px;
-    padding: 10px 15px;
-    font-size: 15px;
-  }
-  .el-divider--horizontal {margin: 12px 0 !important;}
-  .el-button.is-circle {border-color: rgba(0,0,0,.5) !important;}
-  [class*=" el-icon-"], [class^=el-icon-] {
-    color: rgba(0,0,0,.9) !important;
-    font-weight: 600 !important;
-  }
-  .select li {
-    height: 28px !important;
-    line-height: 28px !important;
-    color: rgba(0,0,0,.9) !important;
-    text-align: center;
-  }
-  .el-input__inner {
-    color: rgba(0,0,0,.9) !important;
-    border-color: rgba(0,0,0,.4) !important;
-  }
-  .text-btn {
-    width: 100% !important;
-    padding: unset !important;
-    margin-top: 10px !important;
-    color: #409EFF !important;
-    font-size: 15px !important;
-  }
-  .date-picker {
-    color: rgba(0,0,0,.9) !important;
-  }
-  .el-date-table {font-size: 13px !important;}
-  .el-date-range-picker__header div {font-weight: 400 !important;}
-  .section1 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  @media (max-width: 768px) {
-    .section1 {
-      display: block;
-      text-align: center;
-    }
-    .subsection1 {margin-bottom: 5px;}
-    .picker-title {
-      text-align: center;
-      margin-left: unset;
-    }
-  }
-</style>
