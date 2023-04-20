@@ -1,7 +1,7 @@
 <template>
   <div class="cost-bar-wrap">
     <el-row>
-      <el-col :xs="24" :sm="24" :md="17" :lg="17" :xl="17" style="padding: 7px 0 12px;">
+      <el-col :xs="24" :sm="24" :md="17" :lg="17" :xl="17" style="padding: 8px 0 13px;">
         <div class="picker-title">Даты заезда и выезда</div>
         <el-row class="section1">
           <el-col :xs="24" :sm="11" :md="11" :lg="11" :xl="11" class="subsection1">
@@ -182,7 +182,7 @@ export default {
   margin-left: 20px;
 }
 .__btn {
-  min-height: 80px;
+  min-height: 84px;
   border-radius: unset !important;
   font-size: 20px !important;
   width: 100% !important;
