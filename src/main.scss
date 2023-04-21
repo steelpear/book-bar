@@ -11,7 +11,6 @@ $--height: 86px;
   .picker-title {
     font-size:13px;
     margin-left: 20px;
-    // margin-bottom: -1px;
   }
   .__btn {
     min-height: $--height;
@@ -26,7 +25,6 @@ $--height: 86px;
   .el-date-editor {
     width: 300px !important;
     border-color: rgba(0,0,0,.3) !important;
-    min-height: 45px !important;
     cursor: pointer;
   }
   .el-date-editor .el-range-separator {line-height: 38px !important;}

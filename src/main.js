@@ -2,6 +2,7 @@ import Vue from 'vue'
 import {
   Button,
   Select,
+  Option,
   Dropdown,
   DropdownMenu,
   DatePicker,
@@ -18,6 +19,7 @@ locale.use(lang)
 
 Vue.use(Button)
 Vue.use(Select)
+Vue.use(Option)
 Vue.use(Dropdown)
 Vue.use(DropdownMenu)
 Vue.use(DatePicker)
