@@ -1,4 +1,10 @@
 $--height: 86px;
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+@font-face {
+  font-family: 'element-icons';
+  src: url('#{$--font-path}/element-icons.woff') format('woff'), url('#{$--font-path}/element-icons.ttf') format('truetype');
+}
+
 .cost-bar-wrap {
     position: absolute;
     bottom: 60px;
@@ -88,5 +94,5 @@ $--height: 86px;
       }
     }
     .el-date-table td.in-range div, .el-date-table td.in-range div:hover, .el-date-table.is-week-mode .el-date-table__row.current div, .el-date-table.is-week-mode .el-date-table__row:hover div {
-        background-color: rgba(178,215,239,.6);
+        background-color: rgba(178,215,239,.5) !important;
     }

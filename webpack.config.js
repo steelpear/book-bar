@@ -67,9 +67,13 @@ module.exports = {
           name: '[name].[ext]?[hash]'
         }
       },
+      // {
+      //   test: /\.(png|jpg|gif|eot|woff|ttf|svg|webp|PNG)(\?\S*)?$/,
+      //   use: ['file-loader']
+      // },
       {
-        test: /\.(png|jpg|gif|eot|woff|ttf|svg|webp|PNG)(\?\S*)?$/,
-        use: ['file-loader']
+        test: /\.(woff|woff2|eot|ttf)$/,
+        loader: 'url-loader'
       }
     ]
   },
@@ -100,7 +104,7 @@ if (process.env.NODE_ENV === 'production') {
       }
     }),
     new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
+      sourceMap: false,
       compress: {
         warnings: false
       }
