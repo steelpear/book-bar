@@ -9,10 +9,13 @@
               v-model="dates"
               type="daterange"
               range-separator="—"
-              start-placeholder="Заезд"
-              end-placeholder="Выезд"
+              start-placeholder="Дата заезда"
+              end-placeholder="Дата выезда"
               format="dd.MM.yyyy"
-              :picker-options="{firstDayOfWeek:1}"
+              :picker-options="{
+                firstDayOfWeek:1,
+                disabledDate(time) {return time.getTime() < Date.now() - 8.64e7}
+              }"
               clear-icon="el-icon-close"
               popper-class="date-picker"
               :editable="false"
@@ -110,7 +113,7 @@
                   </div>
                   <el-divider v-if="childs.length < 1"></el-divider>
                   <el-row align="middle" justify="center" type="flex">
-                    <el-button type="primary" size="small" class="text-btn" @click="submitForm">Посмотреть цены</el-button>
+                    <el-button type="primary" icon="el-icon-search" size="small" class="text-btn" @click="submitForm">&nbsp;Посмотреть цены</el-button>
                   </el-row>
                 </div>
               </el-dropdown-menu>

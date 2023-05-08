@@ -1,4 +1,4 @@
-$--height: 86px;
+$--height: 80px;
 $--font-path: '~element-ui/lib/theme-chalk/fonts';
 @font-face {
   font-family: 'element-icons';
@@ -17,6 +17,7 @@ $--font-path: '~element-ui/lib/theme-chalk/fonts';
   .picker-title {
     font-size:13px;
     margin-left: 20px;
+    margin-bottom: -1px;
   }
   .__btn {
     min-height: $--height;
@@ -71,6 +72,7 @@ $--font-path: '~element-ui/lib/theme-chalk/fonts';
       margin-top: 5px !important;
       font-size: 15px !important;
       padding: 10px 25px !important;
+      &>i {color: white !important;}
     }
     .date-picker {
       color: rgba(0,0,0,.9) !important;
