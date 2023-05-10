@@ -27,7 +27,10 @@ Vue.use(Row)
 Vue.use(Col)
 Vue.use(Divider)
 
-new Vue({
-  el: '#book-bar',
-  render: h => h(App)
-})
+const containers = document.querySelectorAll('.__book-bar__')
+for (var i = 0; i < containers.length; i++) {
+    new Vue({
+      el: containers[i],
+      render: h => h(App)
+    })
+}

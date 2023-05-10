@@ -1,7 +1,7 @@
 <template>
   <div class="cost-bar-wrap">
     <el-row>
-      <el-col :xs="24" :sm="24" :md="17" :lg="17" :xl="17" style="padding: 8px 0;">
+      <el-col :xs="24" :sm="24" :md="17" :lg="17" :xl="17" style="padding: 7px 0;">
         <div class="picker-title">Даты заезда и выезда</div>
         <el-row class="section1">
           <el-col :xs="24" :sm="11" :md="11" :lg="11" :xl="11" class="subsection1">
@@ -129,23 +129,19 @@
 </template>
 
 <script>
+import {computed} from './form-state'
 export default {
   name: 'app',
+  computed: {
+    adults: computed.adults,
+    childs: computed.childs,
+    dates: computed.dates
+  },
   data: () => ({
-    adults: 2,
-    childs: [],
     ages: ['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17'],
-    dates: [],
     menu: false,
     menuGuests: false
   }),
-  created () {
-    const startDate = new Date()
-    const endDate = new Date()
-    startDate.setDate(new Date().getDate() + 19)
-    endDate.setDate(new Date().getDate() + 26)
-    this.dates = [startDate.toISOString().slice(0, 10), endDate.toISOString().slice(0, 10)]
-  },
   methods: {
     addAdult () {
       if (this.adults !== 20) ++this.adults
