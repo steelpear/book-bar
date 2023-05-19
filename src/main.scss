@@ -1,5 +1,9 @@
-:root {--color-primary: #0170E3;}
+:root {
+  --color-primary: #0170E3;
+  --color-primary-darken: #0163ca;
+}
 $color-primary: var(--color-primary);
+$color-primary-darken: var(--color-primary-darken);
 $--height: 80px;
 $--font-path: '~element-ui/lib/theme-chalk/fonts';
 @font-face {
@@ -11,7 +15,7 @@ $--font-path: '~element-ui/lib/theme-chalk/fonts';
     position: absolute;
     bottom: 60px;
     width: 900px;
-    box-shadow: 0 0 15px rgba(0,0,0,.15);
+    box-shadow: 0 0 15px rgba(0,0,0,.30);
     border-radius: 3px;
     background: #fff;
     color: rgba(0,0,0,.9);
@@ -30,13 +34,18 @@ $--font-path: '~element-ui/lib/theme-chalk/fonts';
     border-left: 2px solid $color-primary;
   }
   .__btn {
-    min-height: $--height;
+    min-height: $--height + 1;
     border-radius: unset !important;
     font-size: 20px !important;
     width: 100% !important;
     letter-spacing: .04em !important;
-    box-shadow: 0 -15px 15px -15px rgba(0,0,0,.15), 15px 0 15px -15px rgba(0,0,0,.15), 0 15px 15px -15px rgba(0,0,0,.15);
+    box-shadow: 0 -15px 15px -15px rgba(0,0,0,.30), 15px 0 15px -15px rgba(0,0,0,.30), 0 15px 15px -15px rgba(0,0,0,.30);
     background: $color-primary;
+    border-color: $color-primary;
+    &:hover {
+      background: $color-primary-darken;
+      border-color: $color-primary-darken;
+    }
   }
   .el-divider--vertical {height: 2em !important;}
   svg {fill:rgba(0,0,0,.7);}
