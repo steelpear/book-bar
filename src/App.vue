@@ -1,7 +1,7 @@
 <template>
   <div class="cost-bar-wrap">
-    <el-row>
-      <el-col :xs="24" :sm="24" :md="17" :lg="17" :xl="17" style="padding: 7px 0;" class="section1-wrap">
+    <el-row align="middle" type="flex">
+      <el-col :xs="24" :sm="24" :md="17" :lg="17" :xl="17" style="padding: 10px 0;" class="section1-wrap">
         <div class="picker-title">Даты заезда и выезда</div>
         <el-row class="section1">
           <el-col :xs="24" :sm="11" :md="11" :lg="11" :xl="11" class="subsection1">
@@ -62,7 +62,7 @@
                     </div>
                     <div>
                       <el-button size="small" icon="el-icon-minus" circle @click="delAdult"></el-button>
-                      <span style="padding:0 10px;font-size: 17px;">{{ adults }}</span>
+                      <span style="padding:0 5px;font-size: 17px;">{{ adults }}</span>
                       <el-button size="small" icon="el-icon-plus" circle @click="addAdult"></el-button>
                     </div>
                   </el-row>
@@ -76,7 +76,7 @@
                       </el-col>
                       <el-col :span="10">
                         <el-row align="top" justify="space-between" type="flex">
-                          <div style="margin:-2px 4px 0 0;font-size: 18px;">*</div>
+                          <div style="margin:-2px 2px 0 0;font-size: 18px;">*</div>
                           <el-select
                             v-model="item.age"
                             placeholder="Возраст"
