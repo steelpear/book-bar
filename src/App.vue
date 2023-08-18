@@ -134,14 +134,16 @@ export default {
   name: 'app',
   computed: {
     adults: computed.adults,
-    childs: computed.childs,
-    dates: computed.dates
+    childs: computed.childs
   },
-  data: () => ({
-    ages: ['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17'],
-    menu: false,
-    menuGuests: false
-  }),
+  data: function() {
+    return {
+      ages: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17'],
+      menu: false,
+      menuGuests: false,
+      dates: [this.$root.dateStart, this.$root.dateEnd]
+    }
+  },
   methods: {
     addAdult () {
       if (this.adults !== 20) ++this.adults

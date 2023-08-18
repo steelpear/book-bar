@@ -28,9 +28,15 @@ Vue.use(Col)
 Vue.use(Divider)
 
 const containers = document.querySelectorAll('.__book-bar__')
+
 for (var i = 0; i < containers.length; i++) {
-    new Vue({
+  new Vue({
       el: containers[i],
-      render: h => h(App)
-    })
+      render: h => h(App),
+      propsData: {
+          dateStart: containers[i].dataset.dateStart,
+          dateEnd: containers[i].dataset.dateEnd,
+      },
+      props: ['dateStart', 'dateEnd']
+  })
 }
